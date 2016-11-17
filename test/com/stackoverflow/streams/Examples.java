@@ -46,13 +46,13 @@ public class Examples {
     }
     @Before
     public void setUp() {
-        stringList = Arrays.asList("Jonas", "Lars", "Veronica", "Marie", "Elliot", "Sven", "Dämfors");
+        stringList = Arrays.asList("Jonas", "Lars", "Veronica", "Marie", "Elliot", "Sven", "Berg");
         userList = Arrays.asList(new User("Jonas", 38), new User("Lars", 38), new User("Veronica", 39), new User("Marie", 39), new User("Elliot", 1), new User("Sven", 1));
     }
 
     @Test
     public void testFilter() throws Exception {
-        assertEquals(3, stringList.stream().filter(s -> s.endsWith("s")).count());
+        assertEquals(2, stringList.stream().filter(s -> s.endsWith("s")).count());
     }
 
     @Test
